@@ -1,0 +1,10 @@
+{
+  "recent_address_list":["IP"],
+  "upload_speed":2383127,
+  "download_speed":4766254,
+  "server_port":150,
+  "server_address":"IP",
+  "protocal":"udp",
+  "socks5_port":1085,
+  "auto_start":false
+}

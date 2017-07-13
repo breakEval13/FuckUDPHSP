@@ -1,0 +1,10 @@
+{
+  "password": "YjM010$#*(O^#*990",
+  "localPort": 1081,
+  "method": "aes-256-cfb",
+  "logLevel": "INFO",
+  "remotePort": 1085,
+  "proxyType": "socks5",
+  "localIpAddress": "0.0.0.0",
+  "remoteIpAddress": "127.0.0.1"
+}
