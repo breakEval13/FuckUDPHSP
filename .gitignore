@@ -14,13 +14,12 @@
 
 # Package Files #
 *.jar
+*.zip
 *.war
 *.ear
-*.zip
 *.tar.gz
 *.rar
 /Engine/conf/*
-/Engine.zip
 Engine.zip
 /target/*
 /apprun/*
