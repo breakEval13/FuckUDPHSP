@@ -21,6 +21,7 @@
 *.rar
 /Engine/conf/*
 /Engine.zip
+Engine.zip
 /target/*
 /apprun/*
 
