@@ -19,7 +19,10 @@
 *.ear
 *.tar.gz
 *.rar
-/Engine/conf/*
+/Engine/conf/client_config.json
+/Engine/conf/config.xml
+/Engine/conf/pac.xml
+/Engine/conf/port_map.json
 Engine.zip
 /target/*
 /apprun/*
