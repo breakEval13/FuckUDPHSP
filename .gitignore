@@ -23,7 +23,6 @@
 /Engine/conf/config.xml
 /Engine/conf/pac.xml
 /Engine/conf/port_map.json
-Engine.zip
 /target/*
 /apprun/*
 
