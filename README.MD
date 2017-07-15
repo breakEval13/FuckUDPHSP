@@ -9,6 +9,16 @@
 ![](QQ20170713-214330@2x.png)
 
 
+## 服务器简易部署
+
+```bash
+docker run -d --restart=always -e 'SS_PASSWORD=123123' -p 8338:8338/tcp -p 150:150/udp -p 150:150/tcp --name=my-fs-ss firshme/nssserver:latest
+
+```
+  * 用docker启动即可
+  * SS_PASSWORD = 代码里面的密码
+  * 端口不要随意更改
+  
 ## 该版本是临时版本（用来试试水)
 
 ## 本项目用FinalSpeed 修改而来，感谢Finalspeed作出的贡献。
