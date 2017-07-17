@@ -50,7 +50,7 @@ public class Config {
     private IProxy.TYPE _proxyType;
 
     public Config() {
-        loadFromJson("");
+
     }
 
     public Config(String ipAddr, int port, String localIpAddr, int localPort, String method, String password) {
@@ -143,20 +143,15 @@ public class Config {
         return _logLevel;
     }
 
-    public void loadFromJson(String jsonStr) {
-        if (jsonStr.length() == 0) {
-            jsonStr = "{}";
-        }
-
-        JSONObject jObj = (JSONObject)JSONValue.parse(jsonStr);
-        _ipAddr = (String)jObj.getOrDefault("remoteIpAddress", "");
-        _port = ((Number)jObj.getOrDefault("remotePort", 1080)).intValue();
-        _localIpAddr = (String)jObj.getOrDefault("localIpAddress", "127.0.0.1");
-        _localPort = ((Number)jObj.getOrDefault("localPort", 1080)).intValue();
-        _method = (String)jObj.getOrDefault("method", AesCrypt.CIPHER_AES_256_CFB);
-        _password = (String)jObj.getOrDefault("password", "");
-        _logLevel = (String)jObj.getOrDefault("logLevel", "INFO");
-        setProxyType((String) jObj.getOrDefault("proxyType", IProxy.TYPE.SOCKS5.toString().toLowerCase()));
+    public void loadFromJson(com.alibaba.fastjson.JSONObject jso) {
+        _ipAddr = jso.getString("remoteIpAddress");
+        _port = ((Number)jso.getOrDefault("remotePort", 1080)).intValue();
+        _localIpAddr = (String)jso.getOrDefault("localIpAddress", "127.0.0.1");
+        _localPort = ((Number)jso.getOrDefault("localPort", 1080)).intValue();
+        _method = (String)jso.getOrDefault("method", AesCrypt.CIPHER_AES_256_CFB);
+        _password = (String)jso.getOrDefault("password", "");
+        _logLevel = (String)jso.getOrDefault("logLevel", "INFO");
+        setProxyType((String) jso.getOrDefault("proxyType", IProxy.TYPE.SOCKS5.toString().toLowerCase()));
         setLogLevel(_logLevel);
     }
 

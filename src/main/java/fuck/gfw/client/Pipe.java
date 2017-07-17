@@ -76,8 +76,8 @@ public class Pipe {
 				if(Client.ui!=null){
 					if(!msged){
 						msged=true;
-						String msg="端口"+dstPort+"连接成功";
-						MLog.println(msg);
+//						String msg="端口"+dstPort+"连接成功";
+//						MLog.println(msg);
 					}
 					
 				}

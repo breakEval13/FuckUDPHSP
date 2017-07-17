@@ -85,9 +85,9 @@ public class PortMapProcess implements ClientProcessorInterface {
 						}finally{
 							close();
 							if(p2.getReadedLength()==0){
-								//String msg="fs服务连接成功,加速端口"+dstPort+"连接失败1";
-								String msg="端口"+dstPort+"无返回数据";
-								MLog.println(msg);
+								//String msg="NSS服务连接成功,加速端口"+dstPort+"连接失败1";
+//								String msg="端口"+dstPort+"无返回数据";
+//								MLog.println(msg);
 							}
 						}
 					}
@@ -109,16 +109,16 @@ public class PortMapProcess implements ClientProcessorInterface {
 
 				});
 				success=true;
-				uimessage=("fs服务连接成功");
+//				uimessage=("fs服务连接成功");
 			}else {
 				close();
-				uimessage="fs服务连接成功,端口"+dstPort+"连接失败2";
-				MLog.println(uimessage);
+//				uimessage="fs服务连接成功,端口"+dstPort+"连接失败2";
+//				MLog.println(uimessage);
 			}
 		} catch (Exception e1) {
 			e1.printStackTrace();
-			String msg="fs服务连接失败!";
-			MLog.println(msg);
+//			String msg="fs服务连接失败!";
+//			MLog.println(msg);
 		}
 
 	}

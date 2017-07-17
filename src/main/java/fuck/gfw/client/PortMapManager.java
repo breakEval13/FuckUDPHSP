@@ -19,7 +19,7 @@ public class PortMapManager {
 
 	HashMap<Integer, MapRule> mapRuleTable=new HashMap<Integer, MapRule>();
 
-	String configFilePath="conf/port_map.json";
+	String configFilePath="conf/client_config.json";
 
 	PortMapManager(MapClient mapClient){
 		this.mapClient=mapClient;
@@ -133,14 +133,10 @@ public class PortMapManager {
 		} catch (Exception e) {
 			//e.printStackTrace();
 		}
-		if(json!=null&&json.containsKey("map_list")){
-			JSONArray json_map_list=json.getJSONArray("map_list");
-			for(int i=0;i<json_map_list.size();i++){
-				JSONObject json_rule=(JSONObject) json_map_list.get(i);
 				MapRule mapRule=new MapRule();
-				mapRule.name=json_rule.getString("name");
-				mapRule.listen_port=json_rule.getIntValue("listen_port");
-				mapRule.dst_port=json_rule.getIntValue("dst_port");
+				mapRule.name=json.getString("name");
+				mapRule.listen_port=json.getIntValue("listen_port");
+				mapRule.dst_port=json.getIntValue("dst_port");
 				mapList.add(mapRule);
 				ServerSocket serverSocket;
 				try {
@@ -152,8 +148,6 @@ public class PortMapManager {
 					e.printStackTrace();
 				}
 				mapRuleTable.put(mapRule.listen_port, mapRule);
-			}
-		}
 
 	}
 
