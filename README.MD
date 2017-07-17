@@ -1,8 +1,4 @@
-#FUCKUDPHSP
-
-
-## 代码修改图
-![](QQ20170713-214048@2x.png)
+# FUCKUDPHSP
 
 
 ## 成功图
